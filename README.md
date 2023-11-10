@@ -1,24 +1,19 @@
 # CodificadorRotatorio_Clase22
 
-Se definen dos variables enteras, A y B, que representan los pines digitales a los que se conecta el encoder. En este caso, A está en el pin digital 2 y B está en el pin digital 4.
 
-Se definen dos variables enteras, ANTERIOR y POSICION. ANTERIOR almacena el valor anterior de POSICION, y POSICION es una variable global que se utiliza para almacenar la posición actual del encoder.
+Proyecto de Interfaz Gráfica con Efectos Visuales
+¡Hola a todos! Este proyecto marca un emocionante hito en mi aprendizaje, ya que he creado mi primera interfaz gráfica con imágenes y efectos visuales de desplazamiento. A continuación, quiero compartir un resumen de lo que logré y lo que podrán experimentar al explorar esta aplicación.
 
-En la función setup(), se configuran los pines A y B como entradas digitales y se inicia la comunicación serial a una velocidad de 9600 baudios. También se adjunta una interrupción al pin A que ejecutará la función encoder cuando el nivel lógico en el pin A sea bajo (LOW).
+Descripción del Proyecto
+En este proyecto, he diseñado una interfaz gráfica atractiva que va más allá de la funcionalidad básica y busca cautivar a los usuarios a través de la estética visual. Algunos de los elementos destacados incluyen:
 
-El bucle principal (loop()) comprueba si el valor de POSICION ha cambiado en comparación con ANTERIOR. Si ha habido un cambio, se imprime el valor de POSICION en el monitor serial y se actualiza ANTERIOR con el valor actual de POSICION.
+1. Interfaz Gráfica Moderna
+La aplicación presenta una interfaz gráfica moderna que no solo es funcional, sino que también es visualmente atractiva. He trabajado en la disposición de los elementos para crear una experiencia de usuario agradable y fácil de seguir.
 
-La función encoder() se llama cada vez que se produce una interrupción en el pin A. Esta función maneja la lectura del encoder rotativo y actualiza la variable POSICION en consecuencia.
+2. Imágenes Incorporadas
+He integrado imágenes relevantes que no solo complementan la funcionalidad de la aplicación, sino que también añaden un toque visual distintivo. Estas imágenes están cuidadosamente seleccionadas para mejorar la presentación general de la interfaz.
 
-Se declara una variable ultimaInterrupcion para almacenar el tiempo en el que ocurrió la última interrupción. Esto se utiliza para evitar la lectura de múltiples interrupciones muy cercanas en el tiempo.
+3. Efectos de Desplazamiento
+Una de las características más emocionantes de este proyecto son los efectos visuales de desplazamiento. Estos efectos añaden dinamismo a la interfaz, creando una experiencia de usuario más envolvente y cautivadora.
 
-Se obtiene el tiempo actual en milisegundos con millis() y se almacena en la variable tiempoInterrupcion.
-
-Se verifica si ha transcurrido al menos 5 milisegundos desde la última interrupción para evitar la detección de rebotes o ruido del encoder.
-
-Se lee el estado del pin B del encoder. Si está en alto (HIGH), se incrementa la variable POSICION. Si está en bajo, se decrementa la variable POSICION.
-
-Se asegura de que la variable POSICION esté limitada entre 0 y 100 usando las funciones min() y max().
-
-Este código permite controlar y leer la posición de un encoder rotativo y enviar los cambios de posición a través de la comunicación serial, lo que es útil en aplicaciones donde se necesita medir y registrar la posición de un eje rotativo.
-
+Cómo Explorar el Proyecto
